@@ -14,6 +14,20 @@ tinyhome generates a static HTML homepage via shell script.
 
 An example site is available [here](https://lab.bdro.fr/tinyhome/).
 
+## Docker Setup
+
+### compose.yml
+```
+services:
+  tinyhome:
+    environment:
+      REFRESH_INTERVAL:360
+    image: baywolfstudios/tinyhome
+    restart: unless-stopped
+    volumes:
+      - /directory/where/your/configcsv/lives:/config
+```
+
 ## Setup
 
 To generate a personal dashboard:
