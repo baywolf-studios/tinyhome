@@ -28,7 +28,7 @@ services:
       target: 80
     restart: unless-stopped
     volumes:
-    - /vault/containers/tinyhome/config:/config:rw
+    - /host/path/to/config:/config:rw
 ```
 
 ## Setup
