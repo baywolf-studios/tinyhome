@@ -21,14 +21,14 @@ An example site is available [here](https://lab.bdro.fr/tinyhome/).
 services:
   tinyhome:
     environment:
-      REFRESH_INTERVAL:360
+      REFRESH_INTERVAL: '360'
     image: baywolfstudios/tinyhome
     ports:
     - published: 8123
       target: 80
     restart: unless-stopped
     volumes:
-      - /host/path/to/config:/config
+    - /vault/containers/tinyhome/config:/config:rw
 ```
 
 ## Setup
