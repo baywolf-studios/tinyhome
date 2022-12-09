@@ -25,7 +25,7 @@ services:
     image: baywolfstudios/tinyhome
     restart: unless-stopped
     volumes:
-      - /directory/where/your/configcsv/lives:/config
+      - /host/path/to/config:/config
 ```
 
 ## Setup
