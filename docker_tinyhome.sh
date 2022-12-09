@@ -5,7 +5,7 @@ refresh_tinyhome() {
     echo "refresh_tinyhome: Started"
     temp_file=$(mktemp)
     if /app/tinyhome /config/config.csv > "$temp_file"; then
-      if [ ! -f "$temp_file" ]; then
+      if [ -f "$temp_file" ]; then
         mv "$temp_file" /usr/share/nginx/html/index.html
         echo "refresh_tinyhome: Succeeded"
       else
