@@ -23,6 +23,9 @@ services:
     environment:
       REFRESH_INTERVAL:360
     image: baywolfstudios/tinyhome
+    ports:
+    - published: 8123
+      target: 80
     restart: unless-stopped
     volumes:
       - /host/path/to/config:/config
