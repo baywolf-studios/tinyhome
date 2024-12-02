@@ -1,4 +1,4 @@
-FROM nginx:1.27.2-alpine
+FROM nginx:1.27.3-alpine
 
 # Copy static css and fonts to nginx site
 COPY css /usr/share/nginx/html/css
